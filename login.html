@@ -49,6 +49,7 @@
         padding-left: 150px;
         padding-bottom: 30px;
       }
+      
       .signin {
         width: 100%;
         max-width: 330px;
@@ -56,6 +57,12 @@
         margin: auto;
       }
     </style>
+    <meta name="google-signin-scope" content="profile email" />
+    <meta
+      name="google-signin-client_id"
+      content="945167729112-3ike7vmsmaubbf2ar81rncin2tq13g2u.apps.googleusercontent.com"
+    />
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
 
   <body class="text-center">
@@ -84,8 +91,13 @@
           Ingresar
         </button>
       </div>
+      <div
+        id="botongoogle" class="g-signin2 position-relative pt-3" style="left: 42%" data-onsuccess="onSignIn" data-theme="dark"
+      ></div>
     </div>
-    <script src="js/init.js"></script>
+
+    <!-- sacamos el init por error-->
     <script src="js/login.js"></script>
+    <script src="js/OAuth.js"></script>
   </body>
 </html>

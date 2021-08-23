@@ -23,7 +23,7 @@ function verificar(){
         location.href="index.html";
 
         usuario.nombre = user.value;
-        usuario.estado = "Conectado";
+        usuario.estado = "conectado";
 
         localStorage.setItem('usuario',JSON.stringify(usuario));
         sessionStorage.setItem('usuario',JSON.stringify(usuario));
@@ -34,7 +34,7 @@ function verificar(){
 document.addEventListener('DOMContentLoaded', ()=>{
     let usuario = JSON.parse( localStorage.getItem("usuario"));
     if (usuario.estado=='conectado'){
-        location.href="pagina.html";
+        location.href="index.html";
     }
 
 });
