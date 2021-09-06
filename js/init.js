@@ -55,5 +55,6 @@ document.addEventListener("DOMContentLoaded", function(e){
 
 document.getElementById("logout").addEventListener("click",  () => {
   localStorage.removeItem("usuario");
+  sessionStorage.removeItem("usuario")
   location.href="/login.html";
 });

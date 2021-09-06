@@ -36,5 +36,4 @@ document.addEventListener('DOMContentLoaded', ()=>{
     if (usuario.estado=='conectado'){
         location.href="index.html";
     }
-
 });
