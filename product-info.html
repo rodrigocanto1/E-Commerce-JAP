@@ -44,24 +44,68 @@
         <a class="py-2 d-none d-md-inline-block" href="my-profile.html">Mi Perfil</a>
       </div>
     </nav>
-    <div class="container p-5">
-      <div
-        class="alert alert-danger"
-        role="alert"
-        style="position: relative; width: auto; top: 0"
-      >
-        <h4 class="alert-heading">¡A trabajar! :)</h4>
-        <p>
-          Esta sección corresponde a: Entrega 3 (Fecha de entrega: 19/09/2021) y
-          Entrega 4 (Fecha de entrega: 03/10/2021).
-        </p>
-        <hr />
-        <p class="mb-0">
-          Para saber qué debes hacer, fijate en la actividad en CREA
-          correspondiente a esta entrega.
-        </p>
+    <main role="main" class="pb-5">
+      <div class="text-center p-4">
+        <h2>Informacion de los productos</h2>
+      </div>
+      
+      <div class="row justify-content-end">
+        <div class="col-md-6"></div>
+          <div class="col-md-6 col-sm-12 mb-1 container">
+            <div class="row container p-0 m-0">
+              </div>
+            </div>
+          </div>
+      <div class="container">
+        <div class="row"> <div class="row float-right"> 
+      </div>
+          <div class="list-group" id="cat-list-container"></div>
+        </div>
+      </div>
+    </main>
+    <div class="container">
+      <hr>
+      <h1 class="row justify-content-center" style="margin-bottom: 30px;"> Comentarios y calificaiones </h1>
+      <div class="row justify-content-center">
+      </div> 
+      <div id="comentarios" class="container" style="position: relative; width:auto; top: 0;">        
       </div>
     </div>
+    <hr><br>
+    <div class="row justify-content-center" style="width:900; margin-bottom: 30px;">
+      <div class="estrellas">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label for="1" class="btn btn-light"><i class="fas fa-star"></i>
+            <input id="1" class="form-check-input" type="radio" name="estrellas" value="1" autocomplete="off">
+          </label>
+          <label for="2" class="btn btn-light"><i class="fas fa-star"></i>
+            <input id="2" class="form-check-input" type="radio" name="estrellas" value="2" autocomplete="off">
+          </label>
+          <label for="3" class="btn btn-light"><i class="fas fa-star"></i>
+            <input id="3" class="form-check-input" type="radio" name="estrellas" value="3" autocomplete="off">
+          </label>
+          <label for="4" class="btn btn-light"><i class="fas fa-star"></i>
+            <input id="4" class="form-check-input" type="radio" name="estrellas" value="4" autocomplete="off">
+          </label>            
+          <label for="5" class="btn btn-light"><i class="fas fa-star"></i>
+            <input id="5" class="form-check-input" type="radio" name="estrellas" value="5" autocomplete="off">
+          </label>      
+        </div>
+      </div>
+  </div>
+    <div class="row justify-content-center">
+      <div class="row justify-content-center">
+        <textarea id="texto-comentario" class="justify-content-center" style="width: 900px;" placeholder="Deje aqui su comentario..." ></textarea>
+        <br>
+      </div> 
+      <div  class="row justify-content-between">        
+        <button class="btn btn-dark btn-lg" style="width: 900px; margin-top: 20px;" onclick="comentar();"><i class="far fa-comment-dots" style="margin-right: 30px;"></i>Comentar</button>        
+      </div>
+
+    </div>
+  </div>
+
+</div>
     <footer class="text-muted">
       <div class="container">
         <p class="float-right">

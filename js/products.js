@@ -31,6 +31,7 @@ function showCategoriesList(array){
                         <small class="text-muted bi-basket2-fill text-muted">` + category.soldCount + "vendidos "+`</small>  
                     </div>
                     <p>`+ category.description +`</p>
+                    mas info
                 </div>
             </div>
         </div>
