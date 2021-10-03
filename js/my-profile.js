@@ -12,7 +12,7 @@ function usuario(){
 
 
 
-
 document.addEventListener("DOMContentLoaded", function (e) {
 	usuario()
+
 });

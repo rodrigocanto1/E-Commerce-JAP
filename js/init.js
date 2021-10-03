@@ -48,13 +48,17 @@ document.addEventListener("DOMContentLoaded", function(e){
   if (localStorage.getItem("usuario") == null){
     location.href ="login.html";
   };
-
-  
-
+  document.getElementById("usuario").innerText = usuario.nombre;
+    document.getElementById("foto").src = usuario.imageUrl;
 });
+
 
 document.getElementById("logout").addEventListener("click",  () => {
   localStorage.removeItem("usuario");
   sessionStorage.removeItem("usuario")
   location.href="/login.html";
 });
+
+
+  
+

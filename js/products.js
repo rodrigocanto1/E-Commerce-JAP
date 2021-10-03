@@ -21,17 +21,23 @@ function showCategoriesList(array){
         <div class="list-group-item list-group-item-action">
             <div class="row">
                 <div class="col-3">
-                    <img src="` + category.imgSrc + `" alt="` + category.description + `" class="img-thumbnail">
+                    <img src="${category.imgSrc}" alt="${category.description}" class="img-thumbnail">
                 </div>
+
                 <div class="col">
                     <div class="d-flex w-100 justify-content-between">
-                        <h4 class="mb-1">`+ category.name +`</h4> 
-                        <h7 class="text-muted bi-cash-stack text-muted ">` + category.currency + " " + category.cost + " " +`</h7>
-                        <p>` + `</p> <p>` + `</p>  <p>` + `</p> <p>` + `</p>    
-                        <small class="text-muted bi-basket2-fill text-muted">` + category.soldCount + "vendidos "+`</small>  
+                        
+                    <h4 class="mb-1">${category.name}</h4>
+
+                        <h7 class="text-muted bi-cash-stack text-muted "> ${category.currency}   ${category.cost}   </h7>
+                       
+                        <p> </p> <p> </p>  <p>  </p> <p>  </p>    
+                       
+                        <small class="text-muted bi-basket2-fill text-muted">  ${category.soldCount} vendidos</small>  
                     </div>
-                    <p>`+ category.description +`</p>
-                    mas info
+                   
+                    <p> ${category.description} </p>
+                    
                 </div>
             </div>
         </div>
@@ -72,4 +78,7 @@ function ordenar (orden, campo){
     showCategoriesList(categoriesArray);
 
 }
+document.getElementById("cat-list-container").addEventListener("click", () => {
+    location.href= "product-info.html"    
+  });
 

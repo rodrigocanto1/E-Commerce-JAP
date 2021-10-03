@@ -1,12 +1,15 @@
-var InfoArray = [];
- var comentarios = [];
- var mostrar = [];
- var hoy = new Date();
- var fechaActual = (hoy.getFullYear()+"-"+(hoy.getMonth()+1)+"-"+hoy.getDate()+" "+hoy.getHours()+":"+hoy.getMinutes()+":"+hoy.getSeconds());
- var usuario = JSON.parse(localStorage.getItem("usuario"));
- var nombre = usuario.nombre;
- var puntuacion = [];
- var nuevoComentario = [];
+let infoArray = [];
+ let comentarios = [];
+ let mostrar = [];
+ let hoy = new Date();
+ let fechaActual = (hoy.getFullYear()+"-"+(hoy.getMonth()+1)+"-"+hoy.getDate()+" "+hoy.getHours()+":"+hoy.getMinutes()+":"+hoy.getSeconds());
+ let usuario = JSON.parse(localStorage.getItem("usuario"));
+ let nombre = usuario.nombre;
+ let puntuacion = [];
+ let nuevoComentario = [];
+ let relacionados = [];
+ let productosArray = [];
+ 
  
 
 
@@ -149,17 +152,49 @@ function comentar(){
 function vaciarcomentarios() {
     comentarios.length = 0;
 }
+function productosRelacionados(array){
+    array.forEach(rel => {
+    
+      relacionados += `
+      
+        <a class="relacionados"><div  class="justify-content-center" style="width: 500px;">
+        
+          <div class="card justify-content-center" style="width: 500px;">
+            <img src="${productosArray[rel].imgSrc}" style="width: 500px;">
+          </div>
+
+          <div class="row justify-content-center" style="width: 500px; margin-top:15px">
+            <h3 class="text-muted justify-content-center">${productosArray[rel].name}</h3>                
+          </div>
+
+        </div></a>
+        <hr>
+        `;
+
+    });
+    document.getElementById("productos-relacionados").innerHTML = relacionados;
+}
+
+
+
 
 document.addEventListener("DOMContentLoaded", function(e){
 	getJSONData(PRODUCT_INFO_URL).then(function(resultObj){
         if (resultObj.status === "ok")
         {
             
-            InfoArray = resultObj.data;
-            MostrarInfo(InfoArray);
+            infoArray = resultObj.data;
+            MostrarInfo(infoArray);
+            
             
         }
     });
+    getJSONData(PRODUCTS_URL).then(function (resultObj) {
+        if (resultObj.status === "ok") {
+          productosArray = resultObj.data;
+          productosRelacionados(infoArray.relatedProducts);
+        }
+      });
 });
 getJSONData(PRODUCT_INFO_COMMENTS_URL).then(function (resultObj) {
     if (resultObj.status === "ok") {
