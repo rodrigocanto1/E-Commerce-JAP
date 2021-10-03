@@ -39,8 +39,17 @@
           >Productos</a
         >
         <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-        <a class="bi-cart d-md-inline-block d-none py-2" href="cart.html">Mi carrito</a>
-        <a class="py-2 d-none d-md-inline-block" href="my-profile.html">Mi Perfil</a>
+        <div class="dropdown justify-content-between">      
+          <a id="usuario" class="btn btn-dark dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          </a> 
+          <img id="foto" src="" style="width:50px;  padding-right: 15px">
+          <a  class="py-2 d-none d-md-inline-block" ></a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item " href="cart.html">Mi carrito <i class = "bi-cart d-md-inline-block d-none py-2"></i></a>
+            <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
+            <a id="logout" class="dropdown-item" href="#">Cerrar sesión <i class="fas fa-sign-out-alt" style="margin-left: 30px;"></i></a>
+          </div>          
+        </div>
       </div>
     </nav>
     <main role="main" class="pb-5">
