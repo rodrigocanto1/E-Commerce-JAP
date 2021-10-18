@@ -1,4 +1,4 @@
-var categoriesArray = [];
+let categoriesArray = [];
   
 function showCategoriesList(array){
     let minimo = (document.getElementById("minimo").value);
