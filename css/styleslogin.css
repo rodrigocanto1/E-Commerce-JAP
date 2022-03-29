@@ -1,0 +1,23 @@
+* {
+	margin: 0%;
+	padding: 0%;
+}
+body {
+	background-image: url(../img/background.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.isValid {
+	background-color: lightgreen;
+	border-color: green;
+	border-width: thick;
+}
+.isInvalid {
+	background-color: pink;
+	border-color: red;
+}
+.formulario {
+	background-color: #dfe6e9;
+	padding: 20px;
+}
